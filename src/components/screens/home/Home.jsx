@@ -11,6 +11,7 @@ const data = [
   },
   {
     _id: "2",
+
     title: "Read the next chapter of the book",
     isCompleted: false,
   },

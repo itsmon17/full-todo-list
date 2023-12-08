@@ -4,6 +4,10 @@ export const CreateTodoField = ({ setTodos }) => {
   const [title, setTitle] = useState("");
 
   const addTodo = (title) => {
+    if (title.trim() === "") {
+      return;
+    }
+
     setTodos((prev) => [
       {
         title: title,
@@ -14,6 +18,7 @@ export const CreateTodoField = ({ setTodos }) => {
     ]);
     setTitle("");
   };
+  window.addTodo = addTodo;
 
   console.log(title);
   return (
@@ -22,7 +27,7 @@ export const CreateTodoField = ({ setTodos }) => {
         type="text"
         onChange={(e) => setTitle(e.target.value)}
         value={title}
-        onKeyPress={(e) => e.key === "Enter" && addTodo(title)}
+        onKeyDown={(e) => e.key === "Enter" && addTodo(title)}
         className="bg-transparent w-full border-none outline-none"
         placeholder="Add a task"
       />
