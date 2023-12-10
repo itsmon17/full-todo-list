@@ -46,7 +46,7 @@ export const Home = () => {
   // window.addTodo = addTodo; // window delaet chudesa !!!!!!!!!!!!
 
   return (
-    <div className="h-screen text-white w-4/5 mx-auto">
+    <div className="h-screen text-white w-4/5 mx-auto border-width: 0px; ">
       <h1 className="text-2xl font-bold text-center mb-8">Todo for junior</h1>
       {todos.map((todo) => (
         <TodoItem

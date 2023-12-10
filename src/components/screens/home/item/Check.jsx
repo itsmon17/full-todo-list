@@ -8,7 +8,7 @@ export const Check = ({ isCompleted }) => {
         isCompleted ? "bg-pink-400" : ""
       } w-5 h-5 mr-3 flex justify-center items-center`}
     >
-      {isCompleted && <FaCheck size={24} className="text-gray-900" />}
+      {isCompleted && <FaCheck size={24} className="text-gray-900 " />}
     </div>
   );
 };
